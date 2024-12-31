@@ -35,6 +35,45 @@
 
 
             #endregion
+
+            #region Nullable Datatype
+            #region Value Type
+            /* int X = null;*/ // int Number only
+                               //int? X = null; // int Number and Null
+                               // Nullable <int> Number;
+                               //Console.WriteLine(X);
+
+            //int X = 10;
+            //int? Y = X;
+
+            //int? X = null;
+            //int Y;
+            //if (X != null)
+            //{
+            //    Y = (int)X;
+            //}
+            //else
+            //{
+            //    Y = 0;
+            //}
+
+            //if (X.HasValue)
+            //{
+            //    Y = X.Value;
+            //}
+            //else
+            //{
+            //    Y = 0;
+            //}
+            //Y = X.HasValue ? X.Value : 0;
+            //Console.WriteLine(Y);
+            #endregion
+
+            #region Reference Type
+            //string? Name = null;
+            //Console.WriteLine(Name);
+            #endregion
+            #endregion
         }
     }
 }
