@@ -22,7 +22,8 @@
         public static int SumArray(int[] arr)
         {
             int Sum = 0;
-            arr[0] = 100;
+            //arr[0] = 100;
+            arr = new [] { 4, 5, 6 };
             for (int i = 0; i < arr.Length; i++)
             {
 
@@ -35,7 +36,8 @@
         public static int SumArray(ref int[] arr)
         {
             int Sum = 0;
-            arr[0] = 100;
+            //arr[0] = 100;
+            arr = new[] { 4, 5, 6 };
             for (int i = 0; i < arr.Length; i++)
             {
 
@@ -191,6 +193,21 @@
             //Console.WriteLine(Numbers[0]);
             #endregion
             #region By Reference
+            //int[] Numbers = { 1, 2, 3 };
+
+            //Console.WriteLine(SumArray(ref Numbers));
+            //Console.WriteLine(Numbers[0]);
+            #endregion
+            #endregion
+            #region Reference Type Ex02
+
+            #region passing Value
+            //int[] Numbers = { 1, 2, 3 };
+
+            //Console.WriteLine(SumArray(Numbers));
+            //Console.WriteLine(Numbers[0]);
+            #endregion
+            #region Passing Ref
             //int[] Numbers = { 1, 2, 3 };
 
             //Console.WriteLine(SumArray(ref Numbers));
