@@ -115,6 +115,20 @@ namespace Assignment
             }
             return Factorial;
         }
+
+        // Q8
+        public static string ChangeChar(string str,char ch , int pos)
+        {
+            if(pos < 0 || pos > str.Length)
+            {
+                Console.WriteLine("Not Valid");
+                return str;
+            }
+
+            char[] charArray = str.ToCharArray();
+            charArray[pos] = ch;
+            return new string(charArray);
+        }
         static void Main(string[] args)
         {
             #region Q1:Explain the difference between passing (Value type parameters) by value and by reference then write a suitable c# example.
@@ -205,7 +219,10 @@ namespace Assignment
             //Console.WriteLine(Factorial(13));
             #endregion
 
+            #region Q8: Create a function named "ChangeChar" to modify a letter in a certain position (0 based) of a string, replacing it with a different letter
+            //Console.WriteLine(ChangeChar("Mazen",'3',2));
 
+            #endregion
         }
     }
 }
