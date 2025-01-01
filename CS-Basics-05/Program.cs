@@ -23,7 +23,7 @@
         {
             int Sum = 0;
             //arr[0] = 100;
-            arr = new [] { 4, 5, 6 };
+            arr = new[] { 4, 5, 6 };
             for (int i = 0; i < arr.Length; i++)
             {
 
@@ -47,7 +47,11 @@
             return Sum;
 
         }
-
+        public static void SumMul(int X, int Y, ref int Sum, ref int Mul)
+        {
+            Sum = X + Y;
+            Mul = Y * X;
+        }
         static void Main(string[] args)
         {
             #region Casting [Boxing - Unboxing]
@@ -213,6 +217,20 @@
             //Console.WriteLine(SumArray(ref Numbers));
             //Console.WriteLine(Numbers[0]);
             #endregion
+            #endregion
+
+            #region Passing By out
+            //int X = 5, Y = 10;
+            //int Sum, Mul;
+            //SumMul(X, Y,out Sum,out Mul);
+            //Console.WriteLine(Sum);
+            //Console.WriteLine(Mul);
+
+            //int X = 5, Y = 10;
+            //int Sum = default, Mul = default;
+            //SumMul(X, Y, ref Sum, ref Mul);
+            //Console.WriteLine(Sum);
+            //Console.WriteLine(Mul);
             #endregion
 
         }
