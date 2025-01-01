@@ -67,6 +67,23 @@ namespace Assignment
             return Sum;
         }
 
+        // Q5
+        public static bool Isprime(int Num)
+        {
+            if (Num <= 0)
+                return false;
+            if(Num ==2)
+                return true;
+            if (Num % 2 == 0)
+                return false;
+
+            for(int i =3; i < Math.Sqrt(Num);i += 2)
+            {
+                if (Num % i == 0)
+                    return false;
+            }
+            return true;
+        }
         static void Main(string[] args)
         {
             #region Q1:Explain the difference between passing (Value type parameters) by value and by reference then write a suitable c# example.
@@ -138,9 +155,12 @@ namespace Assignment
             #endregion
 
             #region Q4: Write a program in C# Sharp to create a function to calculate the sum of the individual digits of a given number.
-            Console.WriteLine(SumOfDigits(21551));
+            //Console.WriteLine(SumOfDigits(21551));
             #endregion
 
+            #region Q5: Create a function named "IsPrime", which receives an integer number and retuns true if it is prime, or false if it is not:
+            //Console.WriteLine(Isprime(4));
+            #endregion
 
 
 
