@@ -74,6 +74,36 @@
             //Console.WriteLine(Name);
             #endregion
             #endregion
+            #region Null Propagation Operator
+            //int[] Numbers = null;
+            //if (Numbers != null)
+            //{
+            //    for (int i = 0; i < Numbers.Length; i++)
+            //    {
+            //        Console.WriteLine(Numbers[i]);
+            //    }
+            //}
+
+
+            // i < Numbers?.Length
+            // Numbers = Obj [Length]
+            // Numbers = null [Null]
+
+            //int Length = Numbers?.Length ?? 0;
+            //Console.WriteLine(Length);
+
+
+            //Employee Emp = new Employee();
+            //if (Emp != null)
+            //{
+            //    if (Emp.Department != null)
+            //    {
+            //        Console.WriteLine(Emp.Department.Name);
+            //    }
+            //}
+           
+            //Console.WriteLine(Emp?.Department?.Name??"Not Found");
+            #endregion
         }
     }
 }
