@@ -16,8 +16,6 @@
             arr[0] = 99;  // Modifies the original array
             arr = new int[] { 7, 8, 9 };  // Reassignment (no effect outside this method)
         }
-
-        // Pass Array by Reference (Using ref)
        public static void ModifyArrayByRef(ref int[] arr)
         {
             arr[0] = 55;  // Modifies the original array
