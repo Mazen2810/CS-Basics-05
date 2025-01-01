@@ -19,11 +19,11 @@
             Y = Temp;
         }
 
-        public static int SumArray(int[] arr)
+        public static int SumArray(params int[] arr)
         {
             int Sum = 0;
             //arr[0] = 100;
-            arr = new[] { 4, 5, 6 };
+            //arr = new[] { 4, 5, 6 };
             for (int i = 0; i < arr.Length; i++)
             {
 
@@ -231,6 +231,13 @@
             //SumMul(X, Y, ref Sum, ref Mul);
             //Console.WriteLine(Sum);
             //Console.WriteLine(Mul);
+            #endregion
+            #region Functions - Params
+            //int[] numbers = { 1, 2, 3, 4, 5, 6, 7 };
+            // Console.WriteLine(SumArray(1,2,3,4,5,6,7,8,9,10));
+
+            //int A = 10, B = 20, C = 30;
+            //Console.WriteLine("A : {0} , B : {1} , C : {2} " , A,B,C);
             #endregion
 
         }
