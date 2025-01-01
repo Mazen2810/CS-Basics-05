@@ -11,6 +11,19 @@
             x = 20;
         }
 
+        public static void ModifyArrayByValue(int[] arr)
+        {
+            arr[0] = 99;  // Modifies the original array
+            arr = new int[] { 7, 8, 9 };  // Reassignment (no effect outside this method)
+        }
+
+        // Pass Array by Reference (Using ref)
+       public static void ModifyArrayByRef(ref int[] arr)
+        {
+            arr[0] = 55;  // Modifies the original array
+            arr = new int[] { 10, 11, 12 };  // Reassignment (affects the original reference)
+        }
+
         static void Main(string[] args)
         {
             #region Q1:Explain the difference between passing (Value type parameters) by value and by reference then write a suitable c# example.
@@ -34,6 +47,35 @@
             //ModifyValue(ref num);
             //Console.WriteLine(num); // Output: 20 (num is modified)
             #endregion
+
+            #region Q2: Explain the difference between passing (Reference type parameters) by value and by reference then write a suitable c# example
+
+            /*
+             Reference Type passing by value: It doesn't pass the object itself, instead passing the address that pointed to 
+                                              the value in the heap.
+
+            Reference Type passing by ref: It passes the object itself so any change will affect the original object.
+              
+              */
+
+            //Ex for Reference Type passing by value
+            //int[] Numbers = { 1, 2, 3, 4, 5 };
+            //ModifyArrayByValue(Numbers);           
+            //Console.WriteLine(Numbers[0]);
+
+            // Ex for Reference Type passing by ref
+            //int[] Numbers = { 1, 2, 3, 4, 5 };
+            //ModifyArrayByValue(ref Numbers);           
+            //Console.WriteLine(Numbers[0]);
+            #endregion
+
+
+
+
+
+
+
+
         }
     }
 }
