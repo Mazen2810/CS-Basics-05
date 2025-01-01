@@ -33,7 +33,39 @@ namespace Assignment
             sub = X - Y;
         }
 
-        
+        //Q4
+        public static int SumOfDigits(int Num)
+        {
+            int NumOfdigits = 1;
+            int Numm = Num;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Numm /= 10;
+                if (Numm != 0)
+                {
+                    NumOfdigits++;
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+            int[] digits = new int[NumOfdigits];
+            for(int i = 0; i<NumOfdigits;i++)
+            { 
+             
+                digits[i] = Num%10 ;
+                Num /= 10;
+            }
+            int Sum = 0;
+            for(int i = 0;i<digits.Length;i++)
+            {
+                Sum += digits[i];
+            }
+            return Sum;
+        }
 
         static void Main(string[] args)
         {
@@ -105,7 +137,9 @@ namespace Assignment
             //Console.WriteLine($"The Summation of the two numbers = {Sum}\nThe Substraction of the two numbers = {Sub}");
             #endregion
 
-
+            #region Q4: Write a program in C# Sharp to create a function to calculate the sum of the individual digits of a given number.
+            Console.WriteLine(SumOfDigits(21551));
+            #endregion
 
 
 
