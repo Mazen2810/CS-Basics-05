@@ -12,12 +12,40 @@
             }
 
         }
-        public static void Swap(ref int X,ref int Y)
+        public static void Swap(ref int X, ref int Y)
         {
             int Temp = X;
             X = Y;
             Y = Temp;
         }
+
+        public static int SumArray(int[] arr)
+        {
+            int Sum = 0;
+            arr[0] = 100;
+            for (int i = 0; i < arr.Length; i++)
+            {
+
+                Sum += arr[i];
+            }
+
+            return Sum;
+
+        }
+        public static int SumArray(ref int[] arr)
+        {
+            int Sum = 0;
+            arr[0] = 100;
+            for (int i = 0; i < arr.Length; i++)
+            {
+
+                Sum += arr[i];
+            }
+
+            return Sum;
+
+        }
+
         static void Main(string[] args)
         {
             #region Casting [Boxing - Unboxing]
@@ -153,6 +181,23 @@
             //Console.WriteLine(B);
             #endregion
             #endregion
+
+            #region Reference Type Parameters Ex01
+
+            #region By Value
+            //int[] Numbers = { 1, 2, 3 };
+
+            //Console.WriteLine(SumArray(Numbers));
+            //Console.WriteLine(Numbers[0]);
+            #endregion
+            #region By Reference
+            //int[] Numbers = { 1, 2, 3 };
+
+            //Console.WriteLine(SumArray(ref Numbers));
+            //Console.WriteLine(Numbers[0]);
+            #endregion
+            #endregion
+
         }
     }
 }
