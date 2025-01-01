@@ -104,6 +104,17 @@ namespace Assignment
             Min = arr[0];
             Max = arr[n - 1];
         }
+
+        // Q7
+        public static long Factorial(int Num)
+        {
+            long Factorial = 1;
+            for(int i = 1; i <= Num; i++)
+            {
+                Factorial *= i;
+            }
+            return Factorial;
+        }
         static void Main(string[] args)
         {
             #region Q1:Explain the difference between passing (Value type parameters) by value and by reference then write a suitable c# example.
@@ -189,6 +200,11 @@ namespace Assignment
             //Console.WriteLine(Max);
             //Console.WriteLine(Min);
             #endregion
+
+            #region Q7: Create an iterative (non-recursive) function to calculate the factorial of the number specified as parameter
+            //Console.WriteLine(Factorial(13));
+            #endregion
+
 
         }
     }
