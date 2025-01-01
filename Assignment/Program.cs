@@ -1,7 +1,10 @@
-﻿namespace Assignment
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Assignment
 {
     internal class Program
     {
+        // Q1
         public static void ModifyValue(int x)
         {
             x = 20;
@@ -11,16 +14,26 @@
             x = 20;
         }
 
+        // Q2
         public static void ModifyArrayByValue(int[] arr)
         {
             arr[0] = 99;  // Modifies the original array
             arr = new int[] { 7, 8, 9 };  // Reassignment (no effect outside this method)
         }
-       public static void ModifyArrayByRef(ref int[] arr)
+        public static void ModifyArrayByRef(ref int[] arr)
         {
             arr[0] = 55;  // Modifies the original array
             arr = new int[] { 10, 11, 12 };  // Reassignment (affects the original reference)
         }
+
+        // Q3
+        public static void SumSub(int X, int Y, out int sum, out int sub)
+        {
+            sum = X + Y;
+            sub = X - Y;
+        }
+
+        
 
         static void Main(string[] args)
         {
@@ -67,7 +80,30 @@
             //Console.WriteLine(Numbers[0]);
             #endregion
 
+            #region Q3: Write a c# Function that accept 4 parameters from user and return result of summation and subtracting of two numbers
+            //bool flag1;
+            //bool flag2;
+            //int FNum;
+            //int SNum;
+            //do
+            //{
+            //    Console.WriteLine("Enter the First Number");
+            //    flag1 = int.TryParse(Console.ReadLine(), out  FNum);
 
+            //} while (!flag1);
+            //do
+            //{
+
+            //    Console.WriteLine("Enter the Second Number");
+            //    flag2 = int.TryParse(Console.ReadLine(), out  SNum);
+            //} while (!flag2);
+
+
+            //int Sum = default, Sub = default;
+            //SumSub(FNum, SNum, out Sum, out Sub);
+
+            //Console.WriteLine($"The Summation of the two numbers = {Sum}\nThe Substraction of the two numbers = {Sub}");
+            #endregion
 
 
 
