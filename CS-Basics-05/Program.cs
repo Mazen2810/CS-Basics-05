@@ -1,7 +1,17 @@
 ﻿namespace CS_Basics_05
 {
     internal class Program
+
     {
+
+        public static void Printshape(int Count = 10, string Pattern = "*_*")
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                Console.WriteLine(Pattern);
+            }
+
+        }
         static void Main(string[] args)
         {
             #region Casting [Boxing - Unboxing]
@@ -101,8 +111,18 @@
             //        Console.WriteLine(Emp.Department.Name);
             //    }
             //}
-           
+
             //Console.WriteLine(Emp?.Department?.Name??"Not Found");
+            #endregion
+
+            #region Function
+            //Printshape(10, "*_*");
+            //Printshape(Pattern: "*_*", Count: 10);
+
+            //Printshape();
+            //Console.WriteLine("Hello Mazen\nWelcom to \tRoute");
+            //Printshape(10 , @"/*\");
+
             #endregion
         }
     }
