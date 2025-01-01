@@ -12,6 +12,12 @@
             }
 
         }
+        public static void Swap(ref int X,ref int Y)
+        {
+            int Temp = X;
+            X = Y;
+            Y = Temp;
+        }
         static void Main(string[] args)
         {
             #region Casting [Boxing - Unboxing]
@@ -123,6 +129,29 @@
             //Console.WriteLine("Hello Mazen\nWelcom to \tRoute");
             //Printshape(10 , @"/*\");
 
+            #endregion
+
+            #region Value Type Parameters
+
+            #region Passing by Value
+            //int A = 5;
+            //int B = 10;
+            //Console.WriteLine(A);
+            //Console.WriteLine(B);
+            //Swap(A, B);
+            //Console.WriteLine(A);
+            //Console.WriteLine(B);
+            #endregion
+
+            #region Passing by Reference
+            //int A = 5;
+            //int B = 10;
+            //Console.WriteLine(A);
+            //Console.WriteLine(B);
+            //Swap(ref A,ref B);
+            //Console.WriteLine(A);
+            //Console.WriteLine(B);
+            #endregion
             #endregion
         }
     }
